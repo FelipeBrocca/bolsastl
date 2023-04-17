@@ -1,0 +1,45 @@
+.carousel-root{
+    min-height: 500px;
+    height: calc(100vh - 200px);
+}
+.carousel.carousel-slider{
+    min-height: 500px;
+    height: calc(100vh - 200px);
+}
+.slider-wrapper{
+    min-height: 500px;
+    height: calc(100vh - 200px);
+}
+.slider{
+    min-height: 500px;
+    height: calc(100vh - 200px);
+}
+.carousel .slide {
+    min-height: 500px;
+    height: calc(100vh - 200px);
+    opacity: 0;
+    transition: opacity 1s;
+}
+.carousel .slide.selected {
+   opacity: 1;
+}
+.image-slide-container{
+    min-height: 500px;
+    height: calc(100vh - 200px);
+    position: relative;
+    overflow: hidden;
+}
+.image-slide{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.carousel .control-dots .dot{
+    width: 15px;
+    height: 15px;
+}
+  

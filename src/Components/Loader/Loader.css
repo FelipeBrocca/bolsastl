@@ -1,0 +1,49 @@
+.loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: radial-gradient(circle at center, var(--lightblue), var(--blue));
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--white);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    animation-name: fadeInOut;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.logo-loader{
+    width: 200px;
+    opacity: 0;
+    animation: fade-in 0.5s ease-in forwards;
+}
+.fallback-loader{
+    width: 200px;
+    height: 160px;
+}
+@keyframes fadeInOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+@keyframes fade-in {
+    from {
+      opacity: 0; /* Set starting opacity to 0 */
+    }
+    to {
+      opacity: 1; /* Set ending opacity to 1 */
+    }
+}
