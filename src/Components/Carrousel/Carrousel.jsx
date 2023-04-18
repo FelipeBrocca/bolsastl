@@ -19,7 +19,7 @@ const Carrousel = () => {
             showArrows={false}
             showStatus={false}
             stopOnHover={true}
-            swipeScrollTolerance={60}
+            swipeScrollTolerance={90}
         >
             <div className='image-slide-container'>
                 <Image src={Image1} alt='slide1' className='image-slide' />
