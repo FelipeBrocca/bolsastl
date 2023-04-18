@@ -4,7 +4,7 @@
     flex-direction: column;
     gap: 15px;
     color: var(--midblue);
-    background: linear-gradient(to bottom, var(--white), var(--lightgrey), var(--white));
+    background: radial-gradient(circle at center, #fff, #fff,  var(--lightgrey), #fff, #fff);
     padding: 30px;
     margin: 30px 0px;
 }

@@ -1,0 +1,27 @@
+.products-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--blue);
+}
+.geo-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.geo-nav-list{
+    display: flex;
+    width: 100%;
+}
+.geo-nav-item{
+    width: 25%;
+    font-size: 9px;
+    text-align: center;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+.geo-nav-item.selected{
+    border-bottom: 3px solid var(--midblue);
+    font-size: 14px;
+    width: 50%;
+}

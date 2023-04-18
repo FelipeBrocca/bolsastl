@@ -8,10 +8,11 @@ const Contact = () => {
     const [successSend, setSuccessSend] = useState(false)
     const form = useRef();
 
+
     const sendEmail = (e) => {
         e.preventDefault();
         setLoadingForm(true)
-        emailjs.sendForm('service_fdd65es', 'template_g23bkpq', form.current, '8v7p9kn3ggNSrlgJw')
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_KEY, process.env.REACT_APP_TEMPLATE_KEY, form.current, process.env.REACT_APP_ID_KEY)
             .then((result) => {
                 setLoadingForm(false)
                 if (result.status === 200) {
