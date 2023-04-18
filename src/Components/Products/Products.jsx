@@ -3,13 +3,18 @@ import comedero from '../../images/slide2.jpg'
 import tanque from '../../images/slide3.jpg'
 import Geomembrana from './Geomembrana'
 import imper from '../../images/tanque-geom.jpg'
+import bolsas from '../../images/bolsas.jpeg'
+import bolsones from '../../images/bolsones.jpeg'
+import bigbags from '../../images/bigbags.jpeg'
 import './Products.css'
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Bags from './Bags'
 
 const Products = () => {
 
-  const [selectedSlide, setSelectedSlide] = useState(0);
+  const [selectedGeoSlide, setSelectedGeoSlide] = useState(1);
+  const [selectedBagSlide, setSelectedBagSlide] = useState(1);
 
   const geoProducts = [
     {
@@ -36,39 +41,48 @@ const Products = () => {
     {
       id: 0,
       name: 'Bolsas',
+      image: bolsas,
       text: 'Nuestras bolsas de polipropileno son resistentes, versátiles y perfectas para el envasado de alimentos, productos agrícolas y más. Ligeras, transparentes y personalizables, son una opción económica y práctica para tus necesidades de empaque. Contáctanos para obtener más información.'
     }, {
       id: 1,
       name: 'Bolsones',
+      image: bolsones,
       text: 'Nuestras bolsas de polipropileno son resistentes, versátiles y perfectas para el envasado de alimentos, productos agrícolas y más. Ligeras, transparentes y personalizables, son una opción económica y práctica para tus necesidades de empaque. Contáctanos para obtener más información'
     }, {
       id: 2,
       name: 'Big bags',
+      image: bigbags,
       text: 'Nuestras bolsas de polipropileno son resistentes, versátiles y perfectas para el envasado de alimentos, productos agrícolas y más. Ligeras, transparentes y personalizables, son una opción económica y práctica para tus necesidades de empaque. Contáctanos para obtener más información'
     }
   ]
 
   const carouselRef = useRef(null);
+
   const handleLiItemClick = (index) => {
-    setSelectedSlide(index);
+    setSelectedGeoSlide(index);
+    carouselRef.current.selectItem(index, false);
+  };
+  const handleLiItemClickBag = (index) => {
+    setSelectedBagSlide(index);
     carouselRef.current.selectItem(index, false);
   };
 
 
   return (
-    <div className='products-container'>
-      <div className='geo-container'>
-        <ul className='geo-nav-list'>
+    <div className='products-container' id='products-container'>
+      <div className='product-container geo'>
+        <h2>Trabajos con Geomembrana</h2>
+        <ul className='product-nav-list geo'>
           {
             geoProducts.map(({ id, name }, index) => (
               <li
                 key={name}
-                className={`geo-nav-item ${selectedSlide === id ? 'selected' : ''}`}
+                className={`product-nav-item ${selectedGeoSlide === id ? 'selected' : ''} geo`}
                 onClick={() => handleLiItemClick(index)}
               >
                 {
-                selectedSlide !== id
-                && name.length > 10 ? `${name.slice(0, 9)}...` : name
+                  selectedGeoSlide !== id
+                    && name.length > 10 ? `${name.slice(0, 9)}...` : name
                 }
               </li>
             ))
@@ -76,26 +90,75 @@ const Products = () => {
         </ul>
         <Carousel
           ref={carouselRef}
-          selectedItem={selectedSlide}
+          selectedItem={selectedGeoSlide}
           showIndicators={false}
           autoPlay={false}
           swipeable={false}
           showStatus={false}
+          showThumbs={false}
+          showArrows={false}
         >
           {
             geoProducts.map((geo) => {
               return (
-                <Geomembrana
-                  key={geo.id + geo.name}
-                  geo={geo}
-                />
+                  <Geomembrana
+                    key={geo.id + geo.name}
+                    geo={geo}
+                  >
+                    <div className='button-col-container geo'>
+                  <button className='button-col geo'>Consultar servicio de colocacion</button>
+                    </div>
+                </Geomembrana>
               )
             })
           }
         </Carousel>
       </div>
       <div className='bags-container'>
-
+      <div className='product-container bags'>
+        <h2>Bolsas</h2>
+        <ul className='product-nav-list bags'>
+          {
+            bags.map(({ id, name }, index) => (
+              <li
+                key={name}
+                className={`product-nav-item ${selectedBagSlide === id ? 'selected' : ''} bags`}
+                onClick={() => handleLiItemClickBag(index)}
+              >
+                {
+                  selectedBagSlide !== id
+                    && name.length > 10 ? `${name.slice(0, 9)}...` : name
+                }
+              </li>
+            ))
+          }
+        </ul>
+        <Carousel
+          ref={carouselRef}
+          selectedItem={selectedBagSlide}
+          showIndicators={false}
+          autoPlay={false}
+          swipeable={false}
+          showStatus={false}
+          showThumbs={false}
+          showArrows={false}
+        >
+          {
+            bags.map((geo) => {
+              return (
+                  <Bags
+                    key={geo.id + geo.name}
+                    geo={geo}
+                  >
+                    <div className='button-col-container'>
+                  <button className='button-col bags'>Consultar servicio de colocacion</button>
+                    </div>
+                </Bags>
+              )
+            })
+          }
+        </Carousel>
+      </div>
       </div>
     </div>
   )

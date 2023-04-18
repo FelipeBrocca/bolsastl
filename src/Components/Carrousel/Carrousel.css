@@ -1,22 +1,24 @@
-.carousel-root{
+.principal-carousel-container > .carousel-root{
     min-height: 500px;
     height: calc(100vh - 200px);
 }
-.carousel.carousel-slider{
+.principal-carousel-container > .carousel-root > .carousel.carousel-slider{
     min-height: 500px;
     height: calc(100vh - 200px);
 }
-.slider-wrapper{
+.principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper{
     min-height: 500px;
     height: calc(100vh - 200px);
 }
-.slider{
+.principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper > .slider{
     min-height: 500px;
     height: calc(100vh - 200px);
 }
-.carousel .slide {
+.principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper > .slider > .slide {
     min-height: 500px;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 200px);   
+}
+.slide {
     opacity: 0;
     transition: opacity 1s;
 }

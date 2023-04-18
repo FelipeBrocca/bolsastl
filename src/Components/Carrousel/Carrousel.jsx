@@ -11,27 +11,29 @@ import Image3 from '../../images/slide3.jpg'
 const Carrousel = () => {
 
     return (
-        <Carousel
-            showThumbs={false}
-            infiniteLoop={true}
-            autoPlay={true}
-            interval={10000}
-            showArrows={false}
-            showStatus={false}
-            stopOnHover={true}
-            swipeScrollTolerance={50}
-            preventMovementUntilSwipeScrollTolerance={true}
-        >
-            <div className='image-slide-container'>
-                <Image src={Image1} alt='slide1' className='image-slide' />
-            </div>
-            <div className='image-slide-container'>
-                <Image src={Image2} alt='slide2' className='image-slide' />
-            </div>
-            <div className='image-slide-container'>
-                <Image src={Image3} alt='slide3' className='image-slide' />
-            </div>
-        </Carousel>
+        <div className='principal-carousel-container'>
+            <Carousel
+                showThumbs={false}
+                infiniteLoop={true}
+                autoPlay={true}
+                interval={10000}
+                showArrows={false}
+                showStatus={false}
+                stopOnHover={true}
+                swipeScrollTolerance={50}
+                preventMovementUntilSwipeScrollTolerance={true}
+            >
+                <div className='image-slide-container'>
+                    <Image src={Image1} alt='slide1' className='image-slide' />
+                </div>
+                <div className='image-slide-container'>
+                    <Image src={Image2} alt='slide2' className='image-slide' />
+                </div>
+                <div className='image-slide-container'>
+                    <Image src={Image3} alt='slide3' className='image-slide' />
+                </div>
+            </Carousel>
+        </div>
     );
 };
 

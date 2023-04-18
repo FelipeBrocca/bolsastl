@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from '../Image/Image'
-import img from '../../images/tanque-geom.jpg'
+import img from '../../images/company.jpg'
 import './Company.css'
 
 
 const Company = () => {
     return (
-        <div className='company-section'>
+        <div className='company-section' id='company-section'>
+            <h2 className='company-title'>Quiénes somos</h2>
             <div className='img-company-container'>
                 <Image src={img} alt='im-company' className='img-company' />
             </div>

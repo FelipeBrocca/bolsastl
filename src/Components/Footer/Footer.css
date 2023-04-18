@@ -23,6 +23,9 @@ footer{
     flex-direction: column;
     gap: 20px;
 }
+.nav-footer > .nav-list > .nav-item{
+    cursor: pointer;
+}
 .data-footer{
     width: 50%;
     font-size: 11px;
