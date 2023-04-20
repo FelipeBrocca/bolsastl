@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser';
 import './Contact.css'
 
@@ -6,7 +6,9 @@ const Contact = () => {
 
     const [loadingForm, setLoadingForm] = useState(false)
     const [successSend, setSuccessSend] = useState(false)
+    const [isActive, setIsActive] = useState(false);
     const form = useRef();
+    const ref = useRef(null);
 
 
     const sendEmail = (e) => {
@@ -27,10 +29,34 @@ const Contact = () => {
         e.target.reset()
     };
 
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setIsActive(true);
+                observer.unobserve(entry.target);
+            }
+        });
+        observer.observe(ref.current);
+        return () => observer.disconnect();
+    }, [isActive]);
+
+    useEffect(() => {
+        if (isActive) {
+            const observer = new IntersectionObserver(([entry]) => {
+                if (!entry.isIntersecting) {
+                    setIsActive(false);
+                }
+            });
+            observer.observe(ref.current);
+            return () => observer.disconnect();
+        }
+    }, [isActive]);
+
     return (
-        <div className='contact-section' id='contact-section'>
-            <h2 className='contact-title'>Dejanos tu consulta</h2>
-            <div className='form-container'>
+        <div ref={ref} className='contact-section' id='contact-section'>
+            <h2 className={`contact-title ${isActive ? 'active' : ''}`}>Dejanos tu consulta</h2>
+            <div className={`form-container ${isActive ? 'active' : ''}`}>
                 <form className='form-contact' ref={form} onSubmit={sendEmail}>
                     <input
                         type='text'

@@ -4,26 +4,34 @@
     flex-direction: column;
     gap: 15px;
     color: var(--midblue);
-    background: radial-gradient(circle at center, #fff, #fff,  var(--lightgrey), #fff, #fff);
-    padding: 30px;
-    margin: 30px 0px;
-}
+    background: radial-gradient(circle at center, #fff, #fff,  var(--lightgrey) 25%, #fff, #fff);
+    padding: 100px 0px;
+    max-width: 1400px;
+    align-self: center;
+    width: 100%;
+  }
 .contact-title{
     text-align: center;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1s;
 }
 .form-container{
   width: 100%;
   height: 90%;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s, transform 1s;
 }
 .form-contact{
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-self: center;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
 }
 input[type='text'], [type='email']{
   height: 35px;
@@ -49,43 +57,53 @@ textarea{
   font-size: 16px;
 }
 .success-icon-container{
-    width: 100%;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 .success-icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #4ceb8e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; 
-    animation: fadeEffect 2s ease-in-out forwards; 
-  }
-  .checkmark {
-    font-size: 20px;
-    color: #ffffff; 
-  }
-  .button-form{
-    width: 150px;
-    height: 35px;
-    font-size: 18px;
-    color: var(--white);
-    background-color: var(--midblue);
-    border-radius: 5px;
-    border: none;
-    align-self: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #4ceb8e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  animation: fadeEffect 2s ease-in-out forwards; 
+}
+.checkmark {
+  font-size: 20px;
+  color: #ffffff; 
+}
+.button-form{
+  width: 150px;
+  height: 35px;
+  font-size: 18px;
+  color: var(--white);
+  background-color: var(--midblue);
+  border-radius: 5px;
+  border: none;
+  align-self: center;
     cursor: pointer;
   }
   .button-form:hover{
     background-color: var(--lightblue);
   }
   
+  .contact-title.active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.5s, transform 1s;
+  }
+  .form-container.active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.5s, transform 1s;
+  }
   @keyframes fadeEffect {
     0% {
       opacity: 0;
@@ -94,9 +112,15 @@ textarea{
       opacity: 1;
     }
     80% {
-        opacity: 1;
+      opacity: 1;
     }
     100% {
       opacity: 0;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .contact-section{
+      padding: 140px 0px;
     }
   }

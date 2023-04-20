@@ -31,17 +31,89 @@
     position: relative;
     overflow: hidden;
 }
-.image-slide{
+.slide > .image-slide-container > .image-slide{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .carousel .control-dots .dot{
     width: 15px;
     height: 15px;
 }
-  
+.cover-slide{
+    background-color: rgba(0, 0, 0, 0.502);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px 0px;
+    text-align: center;
+    align-items: center;
+}
+.slide > .image-slide-container > .cover-slide >.cover-slide-title{
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+    color: var(--white);
+    font-weight: 800;
+    text-shadow: 0 1px 3px rgba(0,0,0,.25);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+.slide > .image-slide-container > .cover-slide > .cover-slide-text{
+   font-size: 20px;
+   color: var(--white);
+   font-weight: 800;
+   text-shadow: 0 1px 3px rgba(0,0,0,.25);
+   opacity: 0;
+   transform: translateY(75px);
+   transition: all 1.5s;
+}
+.slide > .image-slide-container > .cover-slide > .cover-slide-button{
+    padding: 15px;
+    align-self: center;
+    background-color: var(--lightgrey);
+    border: none;
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 15px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s, transform 2s, background-color 0.5s;
+}
+.slide > .image-slide-container > .cover-slide > .cover-slide-button:hover{
+    background-color: var(--lightblue);
+    color: white;
+}
+.slide.selected  > .image-slide-container > .cover-slide > .cover-slide-title{
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide.selected  > .image-slide-container > .cover-slide > .cover-slide-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide.selected  > .image-slide-container > .cover-slide > .cover-slide-button{
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide.selected > .image-slide-container > .image-slide{
+    height: 1100px;
+    transition: all 8s;
+}
+
+@media (min-width: 1400px) {
+    .slide.selected > .image-slide-container > .image-slide{
+        height: 1700px;
+    }
+}
+

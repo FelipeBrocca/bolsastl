@@ -4,29 +4,84 @@
     flex-direction: column;
     gap: 10px;
     color: var(--midblue);
+    padding: 100px 0px;
 }
 .img-company-container{
     width: 100%;
     height: 500px;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1s;
 }
 .img-company{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1s;
 }
 .text-company-section{
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1s;
 }
 .company-title{
     text-align: center;
-    padding: 15px 0px;
+    padding: 15px 0px 15px 10px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1s;
+    font-size: 34px;
+}
+.company-title.active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.5s, transform 1s;
+}
+.img-company-container.active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.5s, transform 1s;
+}
+.img-company.active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.5s, transform 1s;
+}
+.text-company-section.active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.5s, transform 1s;
+}
+.company-contain{
+    width: 90%;
+    max-width: 1400px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 1000px) {
+    .company-section{
+        padding: 140px 0px;
+    }
+    .company-contain{
+        flex-direction: row;
+    }
+    .img-company-container{
+        width: 100%;
+        min-width: 500px;
+        max-width: 700px;
+    }
+    .img-company{
+        width: 100%;
+    }
 }
