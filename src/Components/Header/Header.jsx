@@ -10,24 +10,21 @@ const Header = () => {
 
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false)
-  const [scrollState, setScrollState] = useState(true);
+  const [scrollState, setScrollState] = useState(false);
 
 
   useEffect(() => {
+
     const handleScroll = () => {
-      if (window.scrollY >= 500) {
-        setScrollState(false);
-      } else {
-        setScrollState(true);
-      }
-    };
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [window.screenY]);
+        if (window.scrollY >= 400) {
+            setScrollState(true)
+        } else {
+            setScrollState(false)
+        }
+    }
+    window.addEventListener('scroll', handleScroll)
+}, [])
 
 
   const handleToggleMenu = () => {
@@ -59,39 +56,11 @@ const Header = () => {
 
 
 
-  const header = document.getElementById('header')
-  let isScrolling = false;
-  let scrollTimeout;
-
-
-  window.addEventListener('scroll', function () {
-    isScrolling = true;
-    if (header && scrollState) {
-      header.style.position = 'absolute'
-      header.style.transform = 'translateY(0)'
-      header.style.boxShadow = 'none'
-    } else if (header && !scrollState) {
-      header.style.transform = 'translateY(-100%)'
-      header.style.position = 'fixed'
-      header.style.boxShadow = '0px 0px 10px 0px black'
-    }
-
-    clearTimeout(scrollTimeout);
-
-    scrollTimeout = setTimeout(function () {
-      isScrolling = false;
-      if (header) {
-        header.style.transform = 'translateY(0)'
-      }
-    }, 300);
-  });
-
-
-
-
   return (
     <>
-        <header id='header'>
+      <header className={!scrollState ? '' : 'fixed'}>
+        <div className={!scrollState ? 'top-header' : 'top-header-disabled'}></div>
+        <div className={`header-container ${!scrollState ? '' : 'bs-fixed'}`}>
           <div className='logo-container'>
             <Image src={logo} alt='logo-header' className='logo-header-img' />
             <h3>Bolsas Trenque Lauquen</h3>
@@ -103,18 +72,19 @@ const Header = () => {
               <div></div>
             </div>
             <div className='menu-bs'>
-               <MenuContain />
+              <MenuContain />
             </div>
           </div>
-        </header>
-        {
-          showMenu ? <div className='backdropPopUp' onClick={handleToggleMenu}></div> : ''
-        }
-        <Menu
-          toggleMenu={showMenu}
-        >
-          <span onClick={handleToggleMenu} className='close-menu'>X</span>
-        </Menu>
+        </div>
+      </header>
+      {
+        showMenu ? <div className='backdropPopUp' onClick={handleToggleMenu}></div> : ''
+      }
+      <Menu
+        toggleMenu={showMenu}
+      >
+        <span onClick={handleToggleMenu} className='close-menu'>X</span>
+      </Menu>
     </>
   )
 }

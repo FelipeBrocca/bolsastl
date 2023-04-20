@@ -18,19 +18,7 @@ const Company = () => {
         });
         observer.observe(ref.current);
         return () => observer.disconnect();
-    }, [isActive]);
-
-    useEffect(() => {
-        if (isActive) {
-            const observer = new IntersectionObserver(([entry]) => {
-                if (!entry.isIntersecting) {
-                    setIsActive(false);
-                }
-            });
-            observer.observe(ref.current);
-            return () => observer.disconnect();
-        }
-    }, [isActive]);
+    }, []);
 
     return (
         <div

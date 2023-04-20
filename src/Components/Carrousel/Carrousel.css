@@ -80,19 +80,15 @@
 .slide > .image-slide-container > .cover-slide > .cover-slide-button{
     padding: 15px;
     align-self: center;
-    background-color: var(--lightgrey);
+    background-color: var(--green);
     border: none;
-    color: var(--blue);
+    color: var(--white);
     cursor: pointer;
     font-weight: 800;
     font-size: 15px;
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 2s, transform 2s, background-color 0.5s;
-}
-.slide > .image-slide-container > .cover-slide > .cover-slide-button:hover{
-    background-color: var(--lightblue);
-    color: white;
 }
 .slide.selected  > .image-slide-container > .cover-slide > .cover-slide-title{
     opacity: 1;
@@ -111,6 +107,15 @@
     transition: all 8s;
 }
 
+@media (min-width: 769px) {
+    .slide > .image-slide-container > .cover-slide > .cover-slide-title{
+        font-size: 60px;
+    }
+    .slide > .image-slide-container > .cover-slide > .cover-slide-button{
+        font-size: 20px;
+        padding: 20px 40px;
+    }
+}
 @media (min-width: 1400px) {
     .slide.selected > .image-slide-container > .image-slide{
         height: 1700px;

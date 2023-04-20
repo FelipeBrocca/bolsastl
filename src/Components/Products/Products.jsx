@@ -13,8 +13,8 @@ import Bags from './Bags'
 
 const Products = () => {
 
-  const [selectedGeoSlide, setSelectedGeoSlide] = useState(1);
-  const [selectedBagSlide, setSelectedBagSlide] = useState(1);
+  const [selectedGeoSlide, setSelectedGeoSlide] = useState(0);
+  const [selectedBagSlide, setSelectedBagSlide] = useState(0);
 
   const geoProducts = [
     {
@@ -75,26 +75,14 @@ const Products = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsActive(true);
-        observer.unobserve(entry.target);
-      }
+        if (entry.isIntersecting) {
+            setIsActive(true);
+            observer.unobserve(entry.target);
+        }
     });
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [isActive]);
-
-  useEffect(() => {
-    if (isActive) {
-      const observer = new IntersectionObserver(([entry]) => {
-        if (!entry.isIntersecting) {
-          setIsActive(false);
-        }
-      });
-      observer.observe(ref.current);
-      return () => observer.disconnect();
-    }
-  }, [isActive]);
+}, []);
 
 
   return (

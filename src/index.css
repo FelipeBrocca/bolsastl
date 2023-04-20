@@ -4,6 +4,7 @@
   --lightblue: #3a5e93;
   --white: #f6f6f6;
   --lightgrey: #d9d9d9;
+  --green: #6DA34D;
 }
 *{
   margin: 0;
@@ -30,7 +31,6 @@ main{
   min-height: calc(100vh - 400px);
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
 }
 li{
   list-style: none;
@@ -42,8 +42,5 @@ a{
 @media (min-width: 1000px) {
   #root{
     width: calc(100% - 60px);
-  }
-  main{
-    margin-top: 140px;
   }
 }

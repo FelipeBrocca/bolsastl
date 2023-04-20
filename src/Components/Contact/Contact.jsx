@@ -30,6 +30,7 @@ const Contact = () => {
     };
 
 
+
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
@@ -39,19 +40,7 @@ const Contact = () => {
         });
         observer.observe(ref.current);
         return () => observer.disconnect();
-    }, [isActive]);
-
-    useEffect(() => {
-        if (isActive) {
-            const observer = new IntersectionObserver(([entry]) => {
-                if (!entry.isIntersecting) {
-                    setIsActive(false);
-                }
-            });
-            observer.observe(ref.current);
-            return () => observer.disconnect();
-        }
-    }, [isActive]);
+    }, []);
 
     return (
         <div ref={ref} className='contact-section' id='contact-section'>
