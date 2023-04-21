@@ -1,5 +1,4 @@
 .contact-section{
-    max-height: 900px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -15,19 +14,26 @@
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 1.5s, transform 1s;
+    padding: 20px 0px;
 }
 .form-container{
   width: 100%;
-  height: 90%;
+  height: 100%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 1.5s, transform 1s;
 }
+.data-item{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
 .form-contact{
   width: 100%;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -84,14 +90,14 @@ textarea{
   height: 35px;
   font-size: 18px;
   color: var(--white);
-  background-color: var(--midblue);
+  background-color: var(--green);
   border-radius: 5px;
   border: none;
   align-self: center;
     cursor: pointer;
   }
   .button-form:hover{
-    background-color: var(--lightblue);
+    background-color: var(--lightgreen);
   }
   
   .contact-title.active{
@@ -103,6 +109,44 @@ textarea{
     opacity: 1;
     transform: translateY(0);
     transition: opacity 1.5s, transform 1s;
+  }
+  .info-contact{
+    align-self: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .list-in-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .list-in-contact > p{
+    color: var(--lightblue);
+  }
+  .info-contact > .data-list{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .info-contact > .data-list > .data-item{
+    justify-content: left;
+    font-size: 18px;
+    font-weight: 800;
+  }
+  .info-contact > .data-list > .data-item > .fa-whatsapp{
+    display: flex;
+    align-items: center;
+    color: var(--midblue);
+    font-weight: 800;
+    border: none;
+    background-color: transparent;
+    gap: 10px;
+    font-size: 24px;
+  }
+  .info-contact > .data-list > .data-item > .fa-whatsapp > p{
+    font-size: 18px;
   }
   @keyframes fadeEffect {
     0% {
@@ -118,9 +162,10 @@ textarea{
       opacity: 0;
     }
   }
-
   @media (min-width: 1000px) {
     .contact-section{
       padding: 140px 0px;
+      flex-direction: row;
+      justify-content: center;
     }
   }

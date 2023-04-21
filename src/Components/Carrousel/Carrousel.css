@@ -1,21 +1,26 @@
 .principal-carousel-container > .carousel-root{
     min-height: 500px;
+    max-height: 650px;
     height: calc(100vh - 200px);
 }
 .principal-carousel-container > .carousel-root > .carousel.carousel-slider{
     min-height: 500px;
+    max-height: 650px;
     height: calc(100vh - 200px);
 }
 .principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper{
     min-height: 500px;
+    max-height: 650px;
     height: calc(100vh - 200px);
 }
 .principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper > .slider{
     min-height: 500px;
+    max-height: 650px;
     height: calc(100vh - 200px);
 }
 .principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper > .slider > .slide {
     min-height: 500px;
+    max-height: 650px;
     height: calc(100vh - 200px);   
 }
 .slide {
@@ -27,6 +32,7 @@
 }
 .image-slide-container{
     min-height: 500px;
+    max-height: 650px;
     height: calc(100vh - 200px);
     position: relative;
     overflow: hidden;

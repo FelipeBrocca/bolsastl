@@ -17,14 +17,14 @@ const Header = () => {
 
     const handleScroll = () => {
 
-        if (window.scrollY >= 400) {
-            setScrollState(true)
-        } else {
-            setScrollState(false)
-        }
+      if (window.scrollY >= 400) {
+        setScrollState(true)
+      } else {
+        setScrollState(false)
+      }
     }
     window.addEventListener('scroll', handleScroll)
-}, [])
+  }, [])
 
 
   const handleToggleMenu = () => {
@@ -58,9 +58,9 @@ const Header = () => {
 
   return (
     <>
-      <header className={!scrollState ? '' : 'fixed'}>
-        <div className={!scrollState ? 'top-header' : 'top-header-disabled'}></div>
-        <div className={`header-container ${!scrollState ? '' : 'bs-fixed'}`}>
+      <header>
+        <div className='top-header'></div>
+        <div className='header-container'>
           <div className='logo-container'>
             <Image src={logo} alt='logo-header' className='logo-header-img' />
             <h3>Bolsas Trenque Lauquen</h3>
@@ -77,6 +77,26 @@ const Header = () => {
           </div>
         </div>
       </header>
+
+      <nav className={`header-nav ${scrollState ? 'active' : ''}`}>
+        <div className='header-container nav'>
+          <div className='logo-container nav'>
+            <Image src={logo} alt='logo-header' className='logo-header-img' />
+            <h3>Bolsas Trenque Lauquen</h3>
+          </div>
+          <div className='menu-header-container'>
+            <div className='menu-hamburguer' onClick={handleToggleMenu}>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div className='menu-bs'>
+              <MenuContain />
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {
         showMenu ? <div className='backdropPopUp' onClick={handleToggleMenu}></div> : ''
       }

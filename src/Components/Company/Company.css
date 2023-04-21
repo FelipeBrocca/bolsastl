@@ -77,11 +77,13 @@
         flex-direction: row;
     }
     .img-company-container{
-        width: 100%;
-        min-width: 500px;
-        max-width: 700px;
+        width: 60%;
+        max-width: 900px;
     }
     .img-company{
         width: 100%;
+    }
+    .text-company-section{
+        width: 40%;
     }
 }

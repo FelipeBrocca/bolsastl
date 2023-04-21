@@ -5,6 +5,7 @@
   --white: #f6f6f6;
   --lightgrey: #d9d9d9;
   --green: #6DA34D;
+  --lightgreen: #78b357;
 }
 *{
   margin: 0;
@@ -42,5 +43,10 @@ a{
 @media (min-width: 1000px) {
   #root{
     width: calc(100% - 60px);
+  }
+}
+@media (min-width: 1200px) {
+  #root{
+    width: calc(100% - 120px);
   }
 }

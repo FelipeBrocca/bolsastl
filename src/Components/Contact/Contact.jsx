@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser';
 import './Contact.css'
+import InfoContact from './InfoContact';
 
 const Contact = () => {
 
@@ -44,8 +45,11 @@ const Contact = () => {
 
     return (
         <div ref={ref} className='contact-section' id='contact-section'>
-            <h2 className={`contact-title ${isActive ? 'active' : ''}`}>Dejanos tu consulta</h2>
+            <InfoContact>
+                <h2 className={`contact-title ${isActive ? 'active' : ''}`}>Vías de contacto</h2>
+            </InfoContact>
             <div className={`form-container ${isActive ? 'active' : ''}`}>
+                <h2 className={`contact-title ${isActive ? 'active' : ''}`}>Hacenos tu consulta</h2>
                 <form className='form-contact' ref={form} onSubmit={sendEmail}>
                     <input
                         type='text'
@@ -65,6 +69,7 @@ const Contact = () => {
                     <textarea
                         name='message'
                         rows="5"
+                        placeholder='Tu consulta'
                     />
                     {
                         successSend

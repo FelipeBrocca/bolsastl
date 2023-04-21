@@ -10,7 +10,7 @@ const Banner = () => {
    const bannersItem = [
       {
          image: engranaje,
-         text: 'Materiales resistentes de primera calidad, importados desde ****'
+         text: 'Materiales resistentes de primera calidad importados'
       },
       {
          image: reunion,

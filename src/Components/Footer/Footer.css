@@ -63,8 +63,16 @@ footer{
   display: flex;
   justify-content: center;
 }
-.data-footer > .data-list > li > .whatsapp > .fa.fa-whatsapp{
-    font-size: 30px;
-    cursor: pointer;
+.data-footer > .data-list > li > .fa.fa-whatsapp{
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.data-footer > .data-list > li > .fa.fa-whatsapp > p{
+    font-size: 11px;
 }
   
