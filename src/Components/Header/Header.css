@@ -107,8 +107,10 @@ transition: all 1s;
   .menu-bs > .nav-list{
     display: flex;
     gap: 30px;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 800;
     color: var(--white);
+    padding: 0px 30px;
   }
   .menu-bs > .nav-list > .nav-item{
     cursor: pointer;
