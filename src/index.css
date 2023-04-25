@@ -2,6 +2,7 @@
   --blue: #0b2447;
   --midblue: #19376d;
   --lightblue: #3a5e93;
+  --turquise: #13b5ca;
   --white: #f6f6f6;
   --lightgrey: #d9d9d9;
   --green: #6DA34D;
@@ -11,7 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 body{
   width: calc(100vw - (100vw - 100%));
@@ -20,6 +21,7 @@ body{
   align-items: flex-start;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: var(--white);
 }
 #root{
   width: 100%;

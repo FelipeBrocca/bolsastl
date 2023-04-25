@@ -27,7 +27,7 @@ const Company = () => {
             id='company-section'
         >
             <h2
-                className={`company-title ${isActive ? 'active' : ''}`}>LÍDERES EN GEOMEMBRANA</h2>
+                className={`company-title ${isActive ? 'active' : ''}`}>ACERCA DE NOSOTROS</h2>
             <div className='company-contain'>
                 <div
                     className={`img-company-container ${isActive ? 'active' : ''}`}>

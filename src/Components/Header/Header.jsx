@@ -63,7 +63,7 @@ const Header = () => {
         <div className='header-container'>
           <div className='logo-container'>
             <Image src={logo} alt='logo-header' className='logo-header-img' />
-            <h3>Bolsas Trenque Lauquen</h3>
+            <span>Bolsas Trenque Lauquen</span>
           </div>
           <div className='menu-header-container'>
             <div className='menu-hamburguer' onClick={handleToggleMenu}>

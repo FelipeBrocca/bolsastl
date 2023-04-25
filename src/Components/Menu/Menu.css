@@ -57,7 +57,10 @@
     flex-direction: column;
     gap: 10px;
 }
-.bottom-menu > .data-list > .data-item{
+.bottom-menu > .data-list > .data-item {
+    font-size: 18px;
+}
+.bottom-menu > .data-list > .data-item > p{
     text-align: center;
     font-size: 12px;
 }
@@ -91,4 +94,10 @@
     animation: fade-in 300ms forwards;
     background-color: rgba(0, 0, 0, 0.605);
     z-index: 90;
+}
+
+@media (min-width: 1000px) {
+    .menu-container{
+        display: none;
+    }
 }

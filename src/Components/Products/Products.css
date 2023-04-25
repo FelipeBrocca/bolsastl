@@ -94,6 +94,7 @@
 }
 .product-text{
     font-size: 14px;
+    padding: 10px;
 }
 .image-product-container.bags > img{
     max-height: 400px;

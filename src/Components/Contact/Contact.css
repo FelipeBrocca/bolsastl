@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 15px;
     color: var(--midblue);
-    background: radial-gradient(circle at center, #fff, #fff,  var(--lightgrey) 25%, #fff, #fff);
+    background: radial-gradient(circle at center, var(--white), var(--white), var(--white), var(--lightgrey) 20%, var(--white), var(--white), var(--white));
     padding: 100px 0px;
     max-width: 1400px;
     align-self: center;
@@ -25,6 +25,7 @@
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 1.5s, transform 1s;
+  align-self: center;
 }
 .data-item{
   display: flex;
