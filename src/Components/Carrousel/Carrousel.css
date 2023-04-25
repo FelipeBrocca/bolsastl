@@ -267,5 +267,8 @@
     .slide.selected > .image-slide-container > .image-slide{
         height: 1700px;
     }
+    .slide > .image-slide-container > .cover-slide > .items-slide-ss > .cover-slide-text{
+        max-width: 400px;
+    }
 }
 
