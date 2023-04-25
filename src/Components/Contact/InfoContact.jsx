@@ -1,10 +1,10 @@
 import React from 'react'
 import DataContact from './DataContact'
 
-const InfoContact = ({children}) => {
+const InfoContact = (props) => {
     return (
-        <div className='info-contact'>
-            {children}
+        <div className={`info-contact ${props.isActive ? 'active' : ''}`}>
+            {props.children}
             <div className='list-in-contact'>
                 <p>Estamos para ayudarte.</p>
                 <p>Brindamos servicios en todo el país.</p>

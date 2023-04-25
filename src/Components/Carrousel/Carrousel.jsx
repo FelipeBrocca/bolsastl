@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -24,7 +24,7 @@ const Carrousel = () => {
             <Carousel
                 showThumbs={false}
                 infiniteLoop={false}
-                autoPlay={false}
+                autoPlay={true}
                 interval={10000}
                 showArrows={false}
                 showStatus={false}

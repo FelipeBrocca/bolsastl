@@ -1,25 +1,25 @@
 .principal-carousel-container > .carousel-root{
-    min-height: 500px;
+    min-height: 600px;
     max-height: 650px;
     height: calc(100vh - 200px);
 }
 .principal-carousel-container > .carousel-root > .carousel.carousel-slider{
-    min-height: 500px;
+    min-height: 600px;
     max-height: 650px;
     height: calc(100vh - 200px);
 }
 .principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper{
-    min-height: 500px;
+    min-height: 600px;
     max-height: 650px;
     height: calc(100vh - 200px);
 }
 .principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper > .slider{
-    min-height: 500px;
+    min-height: 600px;
     max-height: 650px;
     height: calc(100vh - 200px);
 }
 .principal-carousel-container > .carousel-root > .carousel.carousel-slider > .slider-wrapper > .slider > .slide {
-    min-height: 500px;
+    min-height: 600px;
     max-height: 650px;
     height: calc(100vh - 200px);   
 }
@@ -31,7 +31,7 @@
    opacity: 1;
 }
 .image-slide-container{
-    min-height: 500px;
+    min-height: 600px;
     max-height: 650px;
     height: calc(100vh - 200px);
     position: relative;
@@ -85,6 +85,7 @@
    background-color: var(--white);
    padding: 15px 30px;
    max-width: 300px;
+   -webkit-text-stroke: 1px var(--lightblue);
 }
 .slide > .image-slide-container > .cover-slide > .items-slide-ss > .cover-slide-button{
     padding: 15px;
@@ -215,7 +216,7 @@
     .slide > .image-slide-container > .cover-slide > .items-slide-ss > .cover-slide-button{
         position: absolute;
         bottom: 50px;
-        left: 10%;
+        left: 100px;
         padding: 25px;
     }
     .items-slide-bs > ul{

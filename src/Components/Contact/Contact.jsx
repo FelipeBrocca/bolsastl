@@ -45,8 +45,8 @@ const Contact = () => {
 
     return (
         <div ref={ref} className='contact-section' id='contact-section'>
-            <InfoContact>
-                <h2 className={`contact-title ${isActive ? 'active' : ''}`}>Vías de contacto</h2>
+            <InfoContact isActive={isActive}>
+                <h2 className='contact-title'>Vías de contacto</h2>
             </InfoContact>
             <div className={`form-container ${isActive ? 'active' : ''}`}>
                 <h2 className={`contact-title ${isActive ? 'active' : ''}`}>Hacenos tu consulta</h2>

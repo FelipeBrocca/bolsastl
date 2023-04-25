@@ -11,9 +11,6 @@
   }
 .contact-title{
     text-align: center;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 1.5s, transform 1s;
     padding: 20px 0px;
 }
 .form-container{
@@ -101,7 +98,7 @@ textarea{
     background-color: var(--lightgreen);
   }
   
-  .contact-title.active{
+  .info-contact.active{
     opacity: 1;
     transform: translateY(0);
     transition: opacity 1.5s, transform 1s;
@@ -117,6 +114,9 @@ textarea{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s;
   }
   .list-in-contact{
     display: flex;
