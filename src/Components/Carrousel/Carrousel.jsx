@@ -23,7 +23,7 @@ const Carrousel = () => {
         <div className='principal-carousel-container'>
             <Carousel
                 showThumbs={false}
-                infiniteLoop={false}
+                infiniteLoop={true}
                 autoPlay={true}
                 interval={10000}
                 showArrows={false}
