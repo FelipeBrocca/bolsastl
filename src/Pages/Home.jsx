@@ -4,6 +4,7 @@ import Banner from '../Components/Banner/Banner'
 import Company from '../Components/Company/Company'
 import Contact from '../Components/Contact/Contact'
 import Products from '../Components/Products/Products'
+import Chosen from '../Components/Company/Chosen'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner />
       <Products />
       <Company />
+      <Chosen />
       <Contact />
     </main>
   )
