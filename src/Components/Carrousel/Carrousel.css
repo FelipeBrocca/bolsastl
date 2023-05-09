@@ -85,7 +85,7 @@
    background-color: var(--white);
    padding: 15px 30px;
    max-width: 300px;
-   -webkit-text-stroke: 1px var(--lightblue);
+   -webkit-text-stroke: .5px var(--lightblue);
 }
 .slide > .image-slide-container > .cover-slide > .items-slide-ss > .cover-slide-button{
     padding: 15px;
@@ -269,6 +269,7 @@
     }
     .slide > .image-slide-container > .cover-slide > .items-slide-ss > .cover-slide-text{
         max-width: 400px;
+        -webkit-text-stroke: 1px var(--lightblue)
     }
 }
 

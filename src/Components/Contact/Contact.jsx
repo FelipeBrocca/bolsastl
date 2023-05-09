@@ -44,13 +44,14 @@ const Contact = () => {
     }, []);
 
     return (
-        <div ref={ref} className='contact-section' id='contact-section'>
+        <div ref={ref} id='contact-section' className='contact-section' 
+        >
             <InfoContact isActive={isActive}>
                 <h2 className='contact-title'>Vías de contacto</h2>
             </InfoContact>
             <div className={`form-container ${isActive ? 'active' : ''}`}>
                 <h2 className={`contact-title ${isActive ? 'active' : ''}`}>Hacenos tu consulta</h2>
-                <form className='form-contact' ref={form} onSubmit={sendEmail}>
+                <form  className='form-contact' ref={form} onSubmit={sendEmail}>
                     <input
                         type='text'
                         placeholder='Nombre completo'
