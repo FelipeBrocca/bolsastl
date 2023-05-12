@@ -10,10 +10,10 @@ footer{
     display: flex;
     height: 100%;
     justify-content: center;
-    gap: 15px;
+    gap: 5px;
 }
 .nav-footer{
-    width: 50%;
+    width: 40%;
     font-size: 18px;
     display: grid;
     place-items: center;
@@ -27,7 +27,7 @@ footer{
     cursor: pointer;
 }
 .data-footer{
-    width: 50%;
+    width: 60%;
     font-size: 11px;
     display: grid;
     place-items: center;
@@ -39,13 +39,22 @@ footer{
 }
 .data-footer > .data-list > .data-item{
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
 }
 .data-footer > .data-list > .data-item > p, 
-.data-footer > .data-list > .data-item > button
+.data-footer > .data-list > .data-item > button,
+.data-footer > .data-list > .data-item > .link-to-maps
 {
-    text-align: left;
+    text-align: right;
     width: 100%;
-    font-size: 11px;
+    font-size: 10px;
+    color: var(--white);
+}
+.data-footer > .data-list > .data-item > .large-p{
+    font-size: 9px;
 }
 .bottom-footer{
     width: 100%;
@@ -76,10 +85,54 @@ footer{
     border: none;
     color: var(--white);
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 10px;
 }
 .data-footer > .data-list > li > .fa.fa-whatsapp > p{
     font-size: 11px;
+}
+
+@media (min-width: 340px) {
+    .data-footer > .data-list > .data-item{
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .data-footer > .data-list > li > .fa.fa-whatsapp{
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 360px) {
+    .data-footer > .data-list > .data-item{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .data-footer > .data-list > .data-item > .link-to-maps{
+        text-align: left;
+    }
+    .data-footer > .data-list > li > .fa.fa-whatsapp{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 435px){
+    .data-footer > .data-list > .data-item > .large-p{
+        font-size: 10px;
+    }
+    .data-footer > .data-list > .data-item > p, 
+.data-footer > .data-list > .data-item > button,
+.data-footer > .data-list > .data-item > .link-to-maps
+{
+    text-align: left;
+    width: 100%;
+    font-size: 12px;
+}
+.nav-footer,
+.data-footer{
+    width: 50%;
+}
 }
   

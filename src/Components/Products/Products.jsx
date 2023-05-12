@@ -1,61 +1,55 @@
 import React, { useState, useRef, useEffect } from 'react'
-import comedero from '../../images/slide3.jpg'
-import tanque from '../../images/tanqueaus.jpg'
 import Geomembrana from './Geomembrana'
-import imper from '../../images/imper.jpg'
-import bolsas from '../../images/bolsas.jpeg'
-import bolsones from '../../images/bolsones.jpeg'
-import bigbags from '../../images/bigbags.jpeg'
 import './Products.css'
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Bags from './Bags'
+import Image from '../Image/Image'
+import tanque from '../../images/tanqueaus.jpg'
+import tanque2 from '../../images/tanqueaus2.jpg'
+import imper from '../../images/imper.jpg'
+import imper2 from '../../images/imper2.jpg'
+import imper3 from '../../images/imper3.jpg'
+import bolsas from '../../images/bolsas.jpeg'
+import bolsones from '../../images/bolsones.jpeg'
+import comedero from '../../images/comedero.jpg'
+import comedero2 from '../../images/comedero2.jpg'
+
 
 const Products = () => {
 
   const [selectedGeoSlide, setSelectedGeoSlide] = useState(0);
-  const [selectedBagSlide, setSelectedBagSlide] = useState(0);
 
   const geoProducts = [
     {
       id: 0,
       name: 'Tanques Australianos',
-      image: tanque,
+      image: [
+        {img: tanque},
+        {img: tanque2}
+      ],
       text: 'Fabricados con geomembrana de alta calidad, estos tanques son impermeables y resistentes a la intemperie, garantizando una solución confiable para tus necesidades de almacenamiento de agua. Son fáciles de instalar y mantener, y su diseño modular permite adaptarlos a diferentes capacidades de almacenamiento. Además, la geomembrana previene la infiltración y la pérdida de agua, lo que ayuda a conservar este recurso valioso. Nuestros tanques australianos de geomembrana son una opción sostenible para el almacenamiento de agua, reduciendo la evaporación y minimizando el impacto ambiental. Contáctanos para obtener más información sobre cómo nuestros tanques australianos de geomembrana pueden beneficiar tu proyecto de almacenamiento de agua.',
       coloc: true
     },
     {
       id: 1,
       name: 'Comederos',
-      image: comedero,
+      image: [
+        {img: comedero},
+        {img: comedero2}
+      ],
       text: 'Descubre nuestros comederos para ganado con geomembrana, una solución innovadora y sostenible para mejorar la alimentación de tu ganado. Nuestros comederos utilizan geomembrana de alta calidad, impermeable y resistente a la intemperie, reduciendo el desperdicio de alimentos y agua. Son fáciles de instalar y mantener, ajustables a las necesidades de tu ganado y resistentes a la corrosión. Además, son una opción sostenible al prevenir la lixiviación de nutrientes y optimizar los costos. Mejora la eficiencia de alimentación de tu ganado y minimiza el impacto ambiental con nuestros comederos para ganado con geomembrana. Contáctanos para obtener más información.',
       coloc: false
     },
     {
       id: 2,
       name: 'Impermeabilizaciones',
-      image: imper,
+      image: [
+        { img: imper },
+        { img: imper2 },
+        { img: imper3 }
+      ],
       text: 'Descubre nuestras soluciones de impermeabilización con geomembrana para la fabricación de estanques artificiales. Nuestras geomembranas de alta calidad son impermeables y resistentes a la intemperie, proporcionando una barrera efectiva para prevenir filtraciones y asegurar la retención del agua en tus estanques. Son fáciles de instalar y adaptar a diferentes tamaños y formas de estanques, lo que facilita su implementación. Nuestras geomembranas también son duraderas y de bajo mantenimiento, lo que reduce los costos a largo plazo.',
       coloc: true
-    }
-  ]
-
-  const bags = [
-    {
-      id: 0,
-      name: 'Bolsas',
-      image: bolsas,
-      text: 'Nuestras bolsas de polipropileno son resistentes, versátiles y perfectas para el envasado de alimentos, productos agrícolas y más. Ligeras, transparentes y personalizables, son una opción económica y práctica para tus necesidades de empaque. Contáctanos para obtener más información.'
-    }, {
-      id: 1,
-      name: 'Bolsones',
-      image: bolsones,
-      text: 'Nuestras bolsas de polipropileno son resistentes, versátiles y perfectas para el envasado de alimentos, productos agrícolas y más. Ligeras, transparentes y personalizables, son una opción económica y práctica para tus necesidades de empaque. Contáctanos para obtener más información'
-    }, {
-      id: 2,
-      name: 'Big bags',
-      image: bigbags,
-      text: 'Nuestras bolsas de polipropileno son resistentes, versátiles y perfectas para el envasado de alimentos, productos agrícolas y más. Ligeras, transparentes y personalizables, son una opción económica y práctica para tus necesidades de empaque. Contáctanos para obtener más información'
     }
   ]
 
@@ -65,24 +59,21 @@ const Products = () => {
     setSelectedGeoSlide(index);
     carouselRef.current.selectItem(index, false);
   };
-  const handleLiItemClickBag = (index) => {
-    setSelectedBagSlide(index);
-    carouselRef.current.selectItem(index, false);
-  };
+
 
   const ref = useRef(null);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-            setIsActive(true);
-            observer.unobserve(entry.target);
-        }
+      if (entry.isIntersecting) {
+        setIsActive(true);
+        observer.unobserve(entry.target);
+      }
     });
     observer.observe(ref.current);
     return () => observer.disconnect();
-}, []);
+  }, []);
 
 
   return (
@@ -140,46 +131,31 @@ const Products = () => {
       </div>
       <div className='bags-container' id='bags-container'>
         <div className='product-container bags'>
-          <h2 className={`product-container-title ${isActive ? 'active' : ''}`}>Bolsas</h2>
-          <div className='product-container-contain'>
-            <ul className={`product-nav-list ${isActive ? 'active' : ''} bags`}>
-              {
-                bags.map(({ id, name }, index) => (
-                  <li
-                    key={name}
-                    className={`product-nav-item ${selectedBagSlide === id ? 'selected' : ''} bags`}
-                    onClick={() => handleLiItemClickBag(index)}
-                  >
-                    <p className='big-nav-item-text always'>
-                      {name}
-                    </p>
-                  </li>
-                ))
-              }
-            </ul>
-            <Carousel
-              ref={carouselRef}
-              selectedItem={selectedBagSlide}
-              showIndicators={false}
-              autoPlay={false}
-              swipeable={false}
-              showStatus={false}
-              showThumbs={false}
-              showArrows={false}
-            >
-              {
-                bags.map((geo) => {
-                  return (
-                    <Bags
-                      key={geo.id + geo.name}
-                      geo={geo}
-                      isActive={isActive}
-                    >
-                    </Bags>
-                  )
-                })
-              }
-            </Carousel>
+          <h2 className={`product-container-title ${isActive ? 'active' : ''}`}>Nuestras bolsas</h2>
+          <div className={`product-container-contain bags ${isActive ? 'active' : ''}`}>
+            <div className='image-bags-products'>
+              <Image src={bolsas} alt='bag-ic' />
+            </div>
+            <div className='text-bags-products'>
+              <p>Los Big Bags son contenedores flexibles
+                y resistentes diseñados para transportar
+                y almacenar grandes cantidades de
+                materiales a granel, tales como productos
+                químicos, alimentos, semillas, minerales,
+                y mucho más. Estos productos son ideales
+                para aquellos que buscan una solución de
+                almacenamiento eficiente, segura y
+                económica.
+                Pero eso no es todo, nuestros Big Bags son
+                también respetuosos con el medio
+                ambiente. Son reutilizables y se pueden
+                reciclar fácilmente después de su uso,
+                reduciendo la huella de carbono de tu
+                negocio.</p>
+            </div>
+            <div className='image-bags-products'>
+              <Image src={bolsones} alt='bigbag-ic' />
+            </div>
           </div>
         </div>
       </div>

@@ -215,9 +215,9 @@
     }
     .slide > .image-slide-container > .cover-slide > .items-slide-ss > .cover-slide-button{
         position: absolute;
-        bottom: 50px;
+        bottom: 40px;
         left: 100px;
-        padding: 25px;
+        padding: 20px;
     }
     .items-slide-bs > ul{
         width: 100%;
@@ -253,10 +253,13 @@
         width: 100%;
         font-weight: bold;
     }
-    .items-slide-bs > ul > li > p{
+    .items-slide-bs > ul > li > p,
+    .items-slide-bs > ul > li > .link-to-maps
+    {
         text-align: left;
         width: 100%;
         font-size: 20px;
+        color: var(--white);
     }
 }
 @media (min-width: 1400px) {

@@ -74,9 +74,9 @@ const Carrousel = () => {
                             <span>
                                 <FontAwesomeIcon icon={faBagShopping} />
                                 <span>
-                                    <p>50 x 50</p>
-                                    <p>100 x 100</p>
-                                    <p>200 x 200</p>
+                                    <p>47 x 90</p>
+                                    <p>52 x 98</p>
+                                    <p>60 x 98</p>
                                 </span>
                             </span>
                         </div>

@@ -36,7 +36,7 @@ const Company = () => {
                 <div
                     className={`text-company-section ${isActive ? 'active' : ''}`}>
                     <strong>Somos una empresa constructora líder con más de 10 años de trayectoria en la comercialización e instalación de materiales geosintéticos. Brindamos soluciones en temas ambientales.</strong>
-                    <p>Las geomembranas de polietileno están específicamente diseñadas para trabajar en condiciones expuestas. Se fabrican con diferentes polímeros y bajo estrictas normas de calidad. Ofrecen una excelente resistencia química, mecánica y a los rayos UV. Son ideales para la contención de líquidos, gases y sólidos. Además, brindan la posibilidad de ensayar la totalidad de las uniones soldadas y la integridad de la lámina in situ mediante rigurosos protocolos de calidad conforme a normas ASTMD.</p>
+                    <p>Las geomembranas de polietileno están específicamente diseñadas para trabajar en condiciones expuestas. Se fabrican con diferentes polímeros y bajo estrictas normas de calidad. Ofrecen una excelente resistencia química, mecánica y a los rayos UV. Son ideales para la contención de líquidos, gases y sólidos. Además, brindan la posibilidad de ensayar la totalidad de las uniones soldadas y la integridad de la lámina in situ mediante rigurosos protocolos de calidad.</p>
                 </div>
             </div>
         </div>

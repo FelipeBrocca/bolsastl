@@ -3,6 +3,7 @@ import ReactWhatsapp from 'react-whatsapp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faThumbTack } from '@fortawesome/free-solid-svg-icons';
+import GoogleMapsLink from '../GoogleMapsLink/MapsLink';
 
 
 const DataContact = () => {
@@ -16,11 +17,11 @@ const DataContact = () => {
             </li>
             <li className='data-item'>
                 <FontAwesomeIcon icon={faEnvelope} />
-                <p>bolsastl@gmail.com</p>
+                <p className='large-p'>bolsastrenquelauquen@gmail.com</p>
             </li>
             <li className='data-item'>
                 <FontAwesomeIcon icon={faThumbTack} />
-                <p>Direccion 123</p>
+                <GoogleMapsLink destination="Regimiento 3 de Caballeria 328, B6400 Trenque Lauquen, Provincia de Buenos Aires" />
             </li>
             <li className='data-item'>
                 <p>Trenque Lauquen, Buenos Aires</p>

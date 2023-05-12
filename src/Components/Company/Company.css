@@ -8,6 +8,7 @@
 }
 .img-company-container{
     width: 100%;
+    max-width: 600px;
     height: 500px;
     position: relative;
     overflow: hidden;
@@ -22,6 +23,8 @@
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 1.5s, transform 1s;
+    border-radius: 5px;
+    max-width: 700px;
 }
 .text-company-section{
     display: flex;
@@ -107,6 +110,7 @@
 .img-comp2{
     max-width: 400px;
     width: 100%;
+    border-radius: 5px;
 }
 .ch-opt-title{
     text-align: center;
@@ -116,6 +120,7 @@
    opacity: 0;
    transform: translateY(100px);
    transition: all 1s;
+   color: var(--midblue);
 }
 .ch-opt-section.active{
     opacity: 1;
@@ -139,16 +144,18 @@
     }
     .company-contain{
         flex-direction: row;
+        justify-content: center;
     }
     .img-company-container{
         width: 60%;
-        max-width: 900px;
+        max-width: 700px;
     }
     .img-company{
         width: 100%;
     }
     .text-company-section{
         width: 40%;
+        font-size: 18px;
     }
     .ch-opt-section > ul > li > strong{
         font-size: 18px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from '../Image/Image'
+import { Carousel } from 'react-responsive-carousel'
 
 const Geomembrana = ({ geo, coloc, isActive }) => {
 
@@ -15,7 +16,22 @@ const Geomembrana = ({ geo, coloc, isActive }) => {
       <div className='contain-product'>
         <h3 className='product-title geo'>{geo.name}</h3>
         <div className='image-product-container geo'>
-          <Image src={geo.image} alt={`prod-${geo.name}`} className='image-product geo' />
+          <Carousel
+            showThumbs={false}
+            showArrows={false}
+            showStatus={false}
+            autoPlay={true}
+            interval={8000}
+            swipeScrollTolerance={50}
+            preventMovementUntilSwipeScrollTolerance={true}
+            infiniteLoop={true}
+          >
+            {
+              geo.image.map((img) => (
+                <Image src={img.img} alt={`prod-${geo.name}`} className='image-product geo' key={geo.name} />
+              ))
+            }
+          </Carousel>
         </div>
         <p className='product-text geo'>{geo.text}</p>
       </div>

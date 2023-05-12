@@ -117,6 +117,7 @@ textarea{
     opacity: 0;
     transform: translateY(100px);
     transition: all 1s;
+    width: 100%;
   }
   .list-in-contact{
     display: flex;
@@ -133,8 +134,11 @@ textarea{
   }
   .info-contact > .data-list > .data-item{
     justify-content: left;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 800;
+  }
+  .fa-whatsapp{
+    cursor: pointer;
   }
   .info-contact > .data-list > .data-item > .fa-whatsapp{
     display: flex;
@@ -144,10 +148,13 @@ textarea{
     border: none;
     background-color: transparent;
     gap: 10px;
-    font-size: 24px;
+    font-size: 16px;
   }
   .info-contact > .data-list > .data-item > .fa-whatsapp > p{
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .info-contact > .data-list > .data-item > .link-to-maps{
+    color: var(--midblue);
   }
   @keyframes fadeEffect {
     0% {

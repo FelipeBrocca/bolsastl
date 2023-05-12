@@ -60,9 +60,12 @@
 .bottom-menu > .data-list > .data-item {
     font-size: 18px;
 }
-.bottom-menu > .data-list > .data-item > p{
+.bottom-menu > .data-list > .data-item > p,
+.bottom-menu > .data-list > .data-item > .link-to-maps
+{
     text-align: center;
     font-size: 12px;
+    color: var(--white);
 }
 .bottom-menu > .data-list > li {
     display: flex;

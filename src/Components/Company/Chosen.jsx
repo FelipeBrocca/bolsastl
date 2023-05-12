@@ -30,15 +30,14 @@ const Chosen = () => {
                             <FontAwesomeIcon icon={faCheck} />
                         </span>
                         <strong>SEGUROS Y EFECTIVOS</strong>
-                        <p>Aplicamos las técnicas más efectivas bajo normas de seguridad que garantizan la calidad de nuestro servicio.
-                            Nuesto personal esta certificado y constantemente capacitado.</p>
+                        <p>Aplicamos las técnicas más efectivas bajo la responsabilidad de nuestro constantemente capacitado personal.</p>
                     </li>
                     <li>
                         <span>
                             <FontAwesomeIcon icon={faCheck} />
                         </span>
                         <strong>ASISTENCIA ADMINISTRATIVA INMEDIATA</strong>
-                        <p>Nuestra mesa de ayuda brinda asesoramiento al instante. Solicitá presupuestos, certificaciones, seguros, etc.</p>
+                        <p>Nuestra mesa de ayuda brinda asesoramiento al instante. Solicitá presupuestos, etc.</p>
                     </li>
                     <li>
                         <span>
