@@ -93,6 +93,9 @@ textarea{
   border: none;
   align-self: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .button-form:hover{
     background-color: var(--lightgreen);
@@ -156,6 +159,61 @@ textarea{
   .info-contact > .data-list > .data-item > .link-to-maps{
     color: var(--midblue);
   }
+
+  .loader-form-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader-form {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: var(--white) var(--white) transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader-form::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent var(--lightblue) var(--lightblue);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+      
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
   @keyframes fadeEffect {
     0% {
       opacity: 0;
