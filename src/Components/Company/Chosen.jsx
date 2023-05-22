@@ -30,7 +30,7 @@ const Chosen = () => {
                             <FontAwesomeIcon icon={faCheck} />
                         </span>
                         <strong>SEGUROS Y EFECTIVOS</strong>
-                        <p>Aplicamos las técnicas más efectivas bajo la responsabilidad de nuestro constantemente capacitado personal.</p>
+                        <p>Aplicamos las técnicas más efectivas bajo la responsabilidad de nuestro personal, que está constantemente capacitado.</p>
                     </li>
                     <li>
                         <span>
